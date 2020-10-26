@@ -1,7 +1,7 @@
 <template>
   <div class="col-sm-6 col-md-4 col-lg-3">
-    <div class="card">
-      <div class="card-body quote">
+    <div class="panel panel-default">
+      <div class="panel-body quote">
         <slot></slot>
       </div>
     </div>
@@ -15,9 +15,9 @@ export default {
 </script>
 
 <style scoped>
-.card-body {
+.panel-body {
   font-family: "Arizonia", cursive;
-  font-size: 1.5rem;
+  font-size: 1em;
   columns: #6e6e6e;
 }
 

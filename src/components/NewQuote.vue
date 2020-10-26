@@ -7,7 +7,6 @@
         <label for="submit-quote">Quote</label>
         <textarea
           name="submit-quote"
-          id="submit-quote"
           class="form-control"
           rows="3"
           v-model="quote"
@@ -33,7 +32,10 @@ export default {
     };
   },
   methods: {
-    createNew: function() {},
+    createNew: function() {
+      this.$emit("quoteAdded", this.quote);
+      this.quote = "";
+    },
   },
 };
 </script>
