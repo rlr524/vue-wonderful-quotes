@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="container">
+    <app-quote-grid :quotes="quotes"></app-quote-grid>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import QuoteGrid from "@/components/QuoteGrid.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
-  }
+    appQuoteGrid: QuoteGrid,
+  },
+  data: function() {
+    return {
+      quotes: [
+        "Never forget who you are, for surely the world will not. Make it your strength. Then it can never be your weakness. Armour yourself in it, and it will never be used against you.",
+      ],
+      maxQuotes: 10,
+    };
+  },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
