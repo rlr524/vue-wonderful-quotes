@@ -16,7 +16,9 @@
       <div
         class="col-sm-8 col-sm-offset-2 col-xs-12 col-md-6 col-md-offset-3 form-group"
       >
-        <button class="btn btn-primary">Add Quote</button>
+        <button class="btn btn-primary" @click.prevent="createNew">
+          Add Quote
+        </button>
       </div>
     </form>
   </div>
@@ -29,6 +31,9 @@ export default {
     return {
       quote: "",
     };
+  },
+  methods: {
+    createNew: function() {},
   },
 };
 </script>
